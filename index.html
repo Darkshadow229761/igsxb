@@ -1,0 +1,60 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>The Last Show</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="game">
+
+    <canvas id="canvas"></canvas>
+
+    <div id="hud">
+      <div id="objective">EXPLORE THE STUDIO</div>
+      <div id="inventory">REELS: 0 / 3</div>
+    </div>
+
+    <div id="interaction"></div>
+
+    <div id="dialogue">
+      <div id="speaker"></div>
+      <div id="dialogueText"></div>
+      <div id="dialogueHint">E — CONTINUE</div>
+    </div>
+
+    <div id="vignette"></div>
+    <div id="film"></div>
+
+    <div id="cursor">
+      <div class="cursorPointer"></div>
+    </div>
+
+    <div id="menu">
+      <div class="menuContent">
+        <h1>THE LAST SHOW</h1>
+        <p>A LOST CARTOON EXPERIENCE</p>
+
+        <button id="startButton">
+          START SHOW
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/player.js"></script>
+  <script src="js/dialogue.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/horror.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+</html>
+```
