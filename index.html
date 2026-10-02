@@ -2,58 +2,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Last Show</title>
+    <title>The Last Show</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="game">
+<div id="game">
 
-    <canvas id="canvas"></canvas>
+    <!-- LOW RESOLUTION PIXEL CANVAS -->
+    <canvas id="gameCanvas" width="320" height="180"></canvas>
 
-    <div id="hud">
-      <div id="objective">EXPLORE THE STUDIO</div>
-      <div id="inventory">REELS: 0 / 3</div>
-    </div>
-
-    <div id="interaction"></div>
-
-    <div id="dialogue">
-      <div id="speaker"></div>
-      <div id="dialogueText"></div>
-      <div id="dialogueHint">E — CONTINUE</div>
-    </div>
-
+    <!-- CRT / FILM EFFECT -->
+    <div id="scanlines"></div>
     <div id="vignette"></div>
-    <div id="film"></div>
+    <div id="filmNoise"></div>
 
-    <div id="cursor">
-      <div class="cursorPointer"></div>
+    <!-- HUD -->
+    <div id="hud">
+
+        <div id="objective">
+            EXPLORE THE STUDIO
+        </div>
+
+        <div id="reelCounter">
+            REELS: 0 / 3
+        </div>
+
     </div>
 
+    <!-- INTERACTION -->
+    <div id="interaction">
+        [E] INTERACT
+    </div>
+
+    <!-- DIALOGUE -->
+    <div id="dialogue">
+
+        <div id="speaker">
+            UNKNOWN
+        </div>
+
+        <div id="dialogueText">
+        </div>
+
+        <div id="dialogueHint">
+            E — CONTINUE
+        </div>
+
+    </div>
+
+    <!-- START MENU -->
     <div id="menu">
-      <div class="menuContent">
-        <h1>THE LAST SHOW</h1>
-        <p>A LOST CARTOON EXPERIENCE</p>
 
-        <button id="startButton">
-          START SHOW
-        </button>
-      </div>
+        <div class="menuContent">
+
+            <div class="smallTitle">
+                A LOST CARTOON EXPERIENCE
+            </div>
+
+            <h1>
+                THE LAST SHOW
+            </h1>
+
+            <div class="menuLine"></div>
+
+            <button id="startButton">
+                START SHOW
+            </button>
+
+            <div class="controls">
+                WASD — MOVE &nbsp; • &nbsp; E — INTERACT
+            </div>
+
+        </div>
+
     </div>
 
-  </div>
+    <!-- CUSTOM PIXEL CURSOR -->
+    <div id="cursor">
 
-  <script src="js/player.js"></script>
-  <script src="js/dialogue.js"></script>
-  <script src="js/world.js"></script>
-  <script src="js/horror.js"></script>
-  <script src="js/game.js"></script>
+        <div class="cursorOuter">
+
+            <div class="cursorInner"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="game.js"></script>
 
 </body>
 </html>
